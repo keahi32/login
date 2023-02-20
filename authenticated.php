@@ -53,11 +53,15 @@ if ($stmt = $con->prepare('SELECT id, password FROM usuarios WHERE email = ?')) 
         } else {
             // Incorrect password
             echo 'Usuario o contraseña incorrecto!';
+            $web=$_SERVER['SERVER_NAME'];
+            header( "refresh:5; url=http://$web:8080/index.php" ); 
             
         }
     } else {
         // Incorrect username
         echo 'Usuario o contraseña incorrecto!';
+        $web=$_SERVER['SERVER_NAME'];
+        header( "refresh:5; url=http://$web:8080/index.php" );
         
     }
 
