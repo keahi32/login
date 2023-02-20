@@ -44,12 +44,10 @@ if ($stmt = $con->prepare('SELECT id, password FROM usuarios WHERE email = ?')) 
             }else{
                 echo "Error: " . $sql . "<br>" . mysqli_error($con);
             }
-            $_SESSION['loggedin'] = TRUE;
-            $_SESSION['name'] = $_POST['email'];
-            $_SESSION['id'] = $id;
-            echo 'Bienvenido ' . $_SESSION['name'] . '!';
-            echo '<br>';
-            echo '<a href="gestionusuarios/../administracion.php">Administrar la web</a>';
+            echo 'Bienvenido ' . $email . '!';
+            $web=$_SERVER['SERVER_NAME'];
+            header( "refresh:5; url=http://$web:80" ); 
+
         } else {
             // Incorrect password
             echo 'Usuario o contraseña incorrecto!';
