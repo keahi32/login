@@ -2,6 +2,6 @@
 $HOST="localhost";
 $DATABASE="docker";
 $USER="root";
-$PASSWORD="";
+$PASSWORD="12345";
 $conn = mysqli_connect($HOST, $USER, $PASSWORD, $DATABASE);
 ?>
