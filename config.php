@@ -1,5 +1,5 @@
 <?php
-
+$HOST="";
 $DATABASE="docker";
 $USER="root";
 $PASSWORD="12345";
